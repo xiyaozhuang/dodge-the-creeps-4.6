@@ -3,7 +3,7 @@ extends CanvasLayer
 signal start_game
 
 
-func show_message(text) -> void:
+func show_message(text: String) -> void:
 	$Message.text = text
 	$Message.show()
 	$MessageTimer.start()
@@ -21,7 +21,7 @@ func show_game_over() -> void:
 	$StartButton.show()
 
 
-func update_score(score) -> void:
+func update_score(score: int) -> void:
 	$ScoreLabel.text = str(score)
 
 
