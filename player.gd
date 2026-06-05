@@ -47,7 +47,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.flip_v = velocity.y > 0
 
 
-func start(pos):
+func start(pos: Vector2) -> void:
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
