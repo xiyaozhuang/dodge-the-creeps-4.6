@@ -2,6 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://d2c1s3qmdi4ti" path="res://player.tscn" id="1_ig7tw"]
 
+[sub_resource type="Curve2D" id="Curve2D_ig7tw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 480, 720, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0)
+}
+point_count = 5
+
 [node name="Main" type="Node" unique_id=1089965881]
 
 [node name="Player" parent="." unique_id=311340842 instance=ExtResource("1_ig7tw")]
@@ -17,3 +23,8 @@ one_shot = true
 
 [node name="StartPosition" type="Marker2D" parent="." unique_id=836626144]
 position = Vector2(240, 450)
+
+[node name="MobPath" type="Path2D" parent="." unique_id=205502705]
+curve = SubResource("Curve2D_ig7tw")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=292971273]
